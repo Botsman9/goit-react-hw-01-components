@@ -10,7 +10,7 @@ import friends from "./components/FriendList/friends.json";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
 import transactions from "./components/TransactionHistory/transactions.json";
 
-export default function App() {
+const App = () => {
   return (
     <div>
       <Profile
@@ -20,10 +20,11 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      ,
-      <Statistic title="Upload stats" stats={statisticalData} />,
+      <Statistic title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />,
-      <TransactionHistory items={transactions} />,
+      <TransactionHistory items={transactions} />
     </div>
   );
-}
+};
+
+export default App;
